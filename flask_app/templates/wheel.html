@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>riCIKLO fatin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../static/css/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../static/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../static/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 6.5.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta data-intl-tel-input-cdn-path="intlTelInput/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../static/css/wheel.css">
+
+</head>
+
+
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+    <header class="d-flex   u-clearfix  u-header u-header" id="sec-389a">
+        <h3 class="bold logo"><span class="black">ReThink</span><span class="green">GREEN</span></h3>
+        <nav class="u-align-right-xs u-menu u-menu-dropdown u-offcanvas u-menu-1 ">
+            <div class="u-custom-menu u-nav-container">
+                <ul class="u-nav u-unstyled u-nav-1 li">
+                    <li class="u-nav-item"><a class="bold u-button-style hover" href="/"
+                            style="padding: 10px 20px;">Home</a></li>
+                    <li class="u-nav-item"><a class="bold u-button-style hover " href="/profile"
+                            style="padding: 10px 20px; ">PROFILE</a></li>
+                    <li class="u-nav-item bold"><a class="bold" href="/wheel" style="padding: 10px 20px; ">riCIKLO
+                            Fatin</a></li>
+                    <!-- <li class="u-nav-item"><a href="/logout">
+                        <img class="shutdown" src="../static/images/shutdown1.png" alt="Logout" style="padding: 10px 20px;">
+                      </a></li> -->
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <br><br><br>
+
+    <div class="wrapper">
+        <div class="container">
+            <canvas id="wheel"></canvas>
+            <button id="spin-btn">Spin</button>
+            <img src="../static/images/arrow.png" alt="spinner arrow" />
+        </div>
+        <div id="final-value">
+        </div>
+
+        <form action="/wheelPoint" method="post"">
+            <input type="hidden" id="point" name="point" value="{{user.points}}">
+            <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="../static/js/wheel.js"></script>
+</body>
+
+</html>
